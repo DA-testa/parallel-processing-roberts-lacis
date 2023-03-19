@@ -12,8 +12,8 @@ def parallel_processing(n, m, data):
         for a in range(n):
             if threads[a][0] == 0:
                 threads[a][0] = data[i]
-                threads[a][1] += data[i]
                 output.append([a,threads[a][1]])
+                threads[a][1] += data[i]
                 i += 1
         for a in range(n):
             if threads[a][0] != 0:
